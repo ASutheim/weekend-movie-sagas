@@ -10,7 +10,8 @@ function MovieDetail() {
 
   useEffect(() => {
     dispatch({ type: "FETCH_THIS_MOVIE", payload: id });
-  }, []);
+    dispatch({ type: "FETCH_THIS_GENRE", payload: id });
+},[]);
 
   return (
     <div class="movie-detail">
