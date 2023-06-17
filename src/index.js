@@ -30,11 +30,11 @@ function* fetchAllMovies() {
 
 function* fetchThisMovie(id) {
   //getting data on a specific movie from the database
-  console.log("LOOOOOOOOOK:", id.payload);
+  console.log("Inside saga request for movie detail info", id.payload);
   try {
     const movie = yield axios.get(`/api/movie/${id.payload}`);
     console.log("Getting movie:", movie.data);
-    yield put({ type: "SET_THIS_MOVIE", payload: movie.data });
+    yield put({ type: "SET_THIS_MOVIE", payload: movie.data[0] });
   } catch {
     console.log("Error getting detail info for movie");
   }
