@@ -6,6 +6,10 @@ function MovieDetail() {
   const dispatch = useDispatch();
   const { id } = useParams();
   console.log("Movie detail:", id);
+
+  useEffect(() => {
+    dispatch({ type: "FETCH_THIS_MOVIE", payload: id });
+  }, []);
 }
 
 export default MovieDetail;
