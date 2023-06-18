@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./MovieList.css";
+import AddMovie from "../AddMovie/AddMovie";
 
 function MovieList() {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ function MovieList() {
 
   return (
     <main>
+      <AddMovie />
       <h1>MovieList</h1>
       <section className="movies">
         {movies.map((movie) => {

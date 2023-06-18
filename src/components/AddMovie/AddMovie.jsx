@@ -17,8 +17,18 @@ const AddMovie = () => {
     setNewMovie({}); //reset store
   };
 
-
-  return 
+  return (
+    <div>
+      <h3>Add a movie to the list:</h3>
+      <form onSubmit={handleSubmit} onChange={handleInput}>
+        <input type="text" value="title" placeholder="Title" required />
+        <input type="text" value="image" placeholder="Image URL" />
+        <textarea name="description" id="description" rows="4" cols="50">
+          A description of the movie
+        </textarea>
+      </form>
+    </div>
+  );
 };
 
 export default AddMovie;
