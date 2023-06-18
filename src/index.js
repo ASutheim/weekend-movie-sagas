@@ -45,7 +45,7 @@ function* fetchThisGenre(id) {
   console.log("Inside saga request for movie genre", id.payload);
   try {
     const genre = yield axios.get(`/api/genre/${id.payload}`);
-    yield put({ type: "SET_THIS_GENRE", payload: genre.data[0] });
+    yield put({ type: "SET_THIS_GENRE", payload: genre.data });
   } catch {
     console.log("error getting genre data for movie");
   }

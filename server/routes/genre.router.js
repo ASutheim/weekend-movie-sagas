@@ -9,7 +9,7 @@ router.get(`/:id`, (req, res) => {
   JOIN movies_genres on genres.id = movies_genres.genre_id
   JOIN movies on movies.id  = movies_genres.movie_id
   WHERE movies.id = ${movieToGet}`;
-  console.log("Getting genre details from server:", movieToGet);
+
   pool
     .query(query)
     .then((result) => {

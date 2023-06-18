@@ -8,11 +8,8 @@ import Card from "@mui/material/Card";
 import { CardActionArea } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 
 function MovieList() {
@@ -31,7 +28,7 @@ function MovieList() {
   return (
     <main>
       {/* <AddMovie /> */}
-      <h1>MovieList</h1>
+      <h1 id="title">Movie List</h1>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={5} rowSpacing={5}>
             {movies.map((movie) => {

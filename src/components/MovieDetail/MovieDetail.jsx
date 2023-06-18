@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import "./MovieDetail.css";
+import Card from "@mui/material/Card";
 
 function MovieDetail() {
   const dispatch = useDispatch();
@@ -21,7 +23,11 @@ function MovieDetail() {
         <button>Return Home</button>
       </a>
       <h3>{movieInfo.title}</h3>
-      <h4>Genre/s: {genreInfo.name}</h4>
+      <h4>Genre/s: </h4>
+      {genreInfo.map((genre) => {
+        return <div id="genre">{genre.name}</div>;
+      })}
+
       <img src={movieInfo.poster} alt={movieInfo.title} />
       <p>{movieInfo.description}</p>
     </div>
