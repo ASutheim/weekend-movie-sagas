@@ -17,7 +17,11 @@ function MovieDetail() {
 
   return (
     <div className="movie-detail">
+      <a href="http://localhost:3000/">
+        <button>Return Home</button>
+      </a>
       <h3>{movieInfo.title}</h3>
+      <h4>Genre/s: {genreInfo.name}</h4>
       <img src={movieInfo.poster} alt={movieInfo.title} />
       <p>{movieInfo.description}</p>
     </div>
