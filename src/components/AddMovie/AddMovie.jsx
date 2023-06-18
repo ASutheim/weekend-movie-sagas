@@ -5,7 +5,13 @@ import { useHistory } from "react-router-dom";
 const AddMovie = () => {
   const dispatch = useDispatch();
 
-  let [newMovie, setNewMovie] = useState({}); //structure object
+  let [newMovie, setNewMovie] = useState({
+    title: "",
+    image: "",
+    description: "",
+    // genre: ??????,
+  }); //structure object
+
 
   const handleInput = (event) => {
     setNewMovie({}); //structure object
@@ -21,8 +27,15 @@ const AddMovie = () => {
     <div>
       <h3>Add a movie to the list:</h3>
       <form onSubmit={handleSubmit} onChange={handleInput}>
-        <input type="text" value="title" placeholder="Title" required />
-        <input type="text" value="image" placeholder="Image URL" /> <br />
+        <input
+          type="text"
+          id="title"
+          value="title"
+          placeholder="Title"
+          required
+        />
+        <input type="text" id="image" value="image" placeholder="Image URL" />{" "}
+        <br />
         <textarea name="description" id="description" rows="4" cols="50">
           A description of the movie
         </textarea>
