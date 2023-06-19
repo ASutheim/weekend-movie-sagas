@@ -28,7 +28,7 @@ function MovieList() {
   return (
     <main>
       {/* <AddMovie /> */}
-      <h1 id="title">Movie List</h1>
+      <div id="title">Movie List</div>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={5} rowSpacing={5}>
           {movies.map((movie) => {
@@ -45,11 +45,12 @@ function MovieList() {
                   <CardActionArea>
                     <div key={movie.id} onClick={() => handleClick(movie.id)}>
                       <center>
+                        <div id="image">
                         <CardMedia
                           sx={{ height: 140, width: 140 }}
                           image={movie.poster}
                           alt={movie.title}
-                        />
+                        /></div>
                         <CardContent>
                           <Typography gutterBottom variant="h5" component="div">
                             {movie.title}
