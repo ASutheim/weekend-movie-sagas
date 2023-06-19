@@ -9,18 +9,16 @@ const AddMovie = () => {
     title: "",
     image: "",
     description: "",
-    // genre: ??????,
-  }); //structure object
-
+  });
 
   const handleInput = (event) => {
-    setNewMovie({}); //structure object
+    setNewMovie({}); 
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch({ type: "ADD_MOVIE", payload: newMovie });
-    setNewMovie({}); //reset store
+    setNewMovie({}); 
   };
 
   return (
@@ -30,16 +28,15 @@ const AddMovie = () => {
         <input
           type="text"
           id="title"
-          value="title"
           placeholder="Title"
           required
         />
-        <input type="text" id="image" value="image" placeholder="Image URL" />{" "}
+        <input type="text" id="image" placeholder="Image URL" />{" "}
         <br />
         <textarea name="description" id="description" rows="4" cols="50">
           A description of the movie
         </textarea>
-        <select name="genres" id="genres">
+        {/* <select name="genres" id="genres">
           <option value="Adventure">Adventure</option>
           <option value="Animated">Animated</option>
           <option value="Biographical">Biographical</option>
@@ -53,7 +50,7 @@ const AddMovie = () => {
           <option value="Science Fiction">Science Fiction</option>
           <option value="Space-Opera">Space-Opera</option>
           <option value="Superhero">Superhero</option>
-        </select>
+        </select> */}
         <input type="submit" value="Submit" />
       </form>
     </div>

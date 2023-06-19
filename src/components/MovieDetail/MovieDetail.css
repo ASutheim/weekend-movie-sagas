@@ -1,0 +1,20 @@
+#button {
+  margin: 10px;
+  padding: 2px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+#title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 50px;
+  margin: 10px;
+}
+#description {
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+}
+
+#movie-detail {
+  background-color: lightgray;
+}

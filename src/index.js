@@ -16,6 +16,7 @@ function* rootSaga() {
   yield takeEvery("FETCH_MOVIES", fetchAllMovies);
   yield takeEvery("FETCH_THIS_MOVIE", fetchThisMovie);
   yield takeEvery("FETCH_THIS_GENRE", fetchThisGenre);
+  yield takeEvery("ADD_MOVIE", addMovie)
 }
 
 function* fetchAllMovies() {
@@ -49,6 +50,10 @@ function* fetchThisGenre(id) {
   } catch {
     console.log("error getting genre data for movie");
   }
+}
+
+function addMovie () {
+    console.log("Inside saga for adding a new movie", id.payload)
 }
 
 // Create sagaMiddleware

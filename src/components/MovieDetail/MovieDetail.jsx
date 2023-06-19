@@ -18,18 +18,22 @@ function MovieDetail() {
   }, []);
 
   return (
-    <div className="movie-detail">
+    <div id="movie-detail">
       <a href="http://localhost:3000/">
-        <button>Return Home</button>
+        <button id="button">Return Home</button>
       </a>
-      <h3>{movieInfo.title}</h3>
-      <h4>Genre/s: </h4>
-      {genreInfo.map((genre) => {
-        return <div id="genre">{genre.name}</div>;
-      })}
+      <p id="title">{movieInfo.title}</p>
+      <div id="image container">
+        <img src={movieInfo.poster} alt={movieInfo.title} />
+      </div>
+      <h4>
+        Genre/s:{" "}
+        {genreInfo.map((genre) => {
+          return <div id="genre">{genre.name}</div>;
+        })}
+      </h4>
 
-      <img src={movieInfo.poster} alt={movieInfo.title} />
-      <p>{movieInfo.description}</p>
+      <p id="description">{movieInfo.description}</p>
     </div>
   );
 }
